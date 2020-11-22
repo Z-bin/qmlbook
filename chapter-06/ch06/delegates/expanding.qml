@@ -6,6 +6,7 @@ Item {
     height: 480
 
     Rectangle {
+        // 子控件的大小设置与父控件大小一样
         anchors.fill: parent
 
         gradient: Gradient {
@@ -33,6 +34,7 @@ Item {
         ListElement { name: "Mars"; imageSource: "images/mars.jpeg"; facts: "Mars is the fourth planet from the Sun in the Solar System. Mars is dry, rocky and cold. It is home to the largest volcano in the Solar System. Mars is named after the mythological Roman god of war because it is a red planet, which signifies the colour of blood." }
     }
 
+    // 组件复用
     Component {
         id: detailsDelegate
 
@@ -61,7 +63,6 @@ Item {
 
                     text: name
                 }
-
             }
 
             // 图片
@@ -122,13 +123,14 @@ Item {
                         wrapMode: Text.WordWrap
                         color: '#1f1f21'
 
-                        font.pixelSize: 2
+                        font.pixelSize: 12
 
                         text: facts
                     }
                 }
             }
 
+            // 关闭按钮
             Rectangle {
                 id: closeButton
 
@@ -151,6 +153,7 @@ Item {
                 }
             }
 
+            // （属于Ｉｔｅｍ的属性）
             states: [
                 State {
                     name: "expanded"
@@ -161,7 +164,6 @@ Item {
                     PropertyChanges { target: closeButton; opacity: 1 }
                     PropertyChanges { target: wrapper.ListView.view; contentY: wrapper.y; interactive: false }
                 }
-
             ]
 
             transitions: [
