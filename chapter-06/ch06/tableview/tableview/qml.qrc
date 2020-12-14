@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>../../common/Background.qml</file>
+        <file>../../common/BlueBox.qml</file>
+        <file>../../common/Box.qml</file>
+        <file>../../common/GreenBox.qml</file>
+        <file>../../common/YellowBox.qml</file>
+    </qresource>
+</RCC>
